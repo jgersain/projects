@@ -16,7 +16,7 @@ $video.addEventListener('timeupdate', handleTimeUpdate);
 $progress.addEventListener('input', handleProgress);
 
 function handleBackward() {
-  $video.currentTime -= 3;
+  $video.currentTime -= 2;
 }
 
 function handlePlay() {
@@ -32,14 +32,19 @@ function handlePause() {
 }
 
 function handleForward() {
-  $video.currentTime += 3;
+  $video.currentTime += 2;
 }
 
 function handleLoaded() {
   $progress.max = $video.duration;
+  $pause.hidden = true;
 }
 
 function handleTimeUpdate() {
+  if ($video.currentTime === $video.duration) {
+    $pause.hidden = true;
+    $play.hidden = false;
+  }
   $progress.value = $video.currentTime;
 }
 
