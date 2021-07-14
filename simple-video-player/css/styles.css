@@ -1,1 +1,22 @@
 @import './button.css';
+
+body {
+  background-color: lightgrey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  max-inline-size: 900px;
+  margin: auto;
+}
+
+.player {
+  margin-block-start: 100px;
+  position: relative;
+}
+
+.player video {
+  inline-size: 100%;
+  vertical-align: middle;
+  aspect-ratio: 16/9;
+}
