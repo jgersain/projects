@@ -10,16 +10,18 @@
 <body>
   <div class="wrapper">
     <div class="player">
-      <video src=""></video>
-      <h2 class="player-title">Música para programar</h2>
-      <div class="player-actions">
-        <button class="btn-player" id="backward" aria-label="Retroceder 10 minutos" title="Retroceder 10 minutos"></button>
-        <button class="btn-player" id="play" aria-label="Play" title="Play"></button>
-        <button class="btn-player" id="pause" aria-label="Pause" title="Pause"></button>
-        <button class="btn-player" id="forward" aria-label="Adelantar 10 minutos" title="Adelantar 10 minutos"></button>
-      </div>
-      <div class="progress">
-        <input type="range">
+      <video id="media-player" src="./videos/video_unam.mp4" poster="./images/poster_unam.png"></video>
+      <div class="player-overlay">
+        <h2 class="player-title">UNAM</h2>
+        <div class="player-actions">
+          <button class="btn-player" id="backward" aria-label="Retroceder 10 minutos" title="Retroceder 10 minutos"></button>
+          <button class="btn-player" id="play" aria-label="Play" title="Play"></button>
+          <button class="btn-player" id="pause" aria-label="Pause" title="Pause"></button>
+          <button class="btn-player" id="forward" aria-label="Adelantar 10 minutos" title="Adelantar 10 minutos"></button>
+        </div>
+        <div class="player-progress">
+          <input id="progress" type="range" min="0" step=".1" value="0">
+        </div>
       </div>
     </div>
   </div>
