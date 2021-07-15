@@ -6,8 +6,6 @@ const $pause = document.querySelector('#pause');
 const $forward = document.querySelector('#forward');
 const $progress = document.querySelector('#progress');
 
-$pause.hidden = true;
-
 $backward.addEventListener('click', handleBackward);
 $play.addEventListener('click', handlePlay);
 $pause.addEventListener('click', handlePause);
